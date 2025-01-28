@@ -6,6 +6,9 @@ query = """
             collections {
               slug
             }
+            category {
+              slug
+            }
             slug
             name
             description
