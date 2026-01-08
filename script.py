@@ -17,7 +17,7 @@ with open('feed.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     field = [
         'id', 'title', 'description', 'availability', 'condition',
-        'price', 'link', 'image_link', 'brand', 'google_product_category',
+        'price', 'product_link', 'link', 'image_link', 'brand', 'google_product_category',
         'plating_material', 'additional_image_link', 'internal_label']
     writer.writerow(field)
     while True:
@@ -60,7 +60,7 @@ with open('feed.csv', 'w', newline='') as file:
             internal_label.append(category)
             writer.writerow(
                 [id, title, description, availability, condition,
-                 price, url, image_link, brand, '194', 'Gold',
+                 price, url, url, image_link, brand, '194', 'Gold',
                  additional_image_link, internal_label])
         # Lets get the next products
         variables = {"first": first, "cursor": cursor}
